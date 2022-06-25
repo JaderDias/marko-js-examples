@@ -1,3 +1,5 @@
+import normalize from "./normalize.css"
+import skeleton from "./skeleton.css"
 import favicon from "./favicon.png";
 
 <!doctype html>
@@ -5,6 +7,11 @@ import favicon from "./favicon.png";
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="32x32" href=favicon>
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <style>
+   ${normalize}
+   ${skeleton}
+  </style>
   <meta name="description" content="An example application showcasing Cloudflare, Vite & Marko.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${input.title}</title>
@@ -13,17 +20,3 @@ import favicon from "./favicon.png";
   <${input.renderBody}/>
 </body>
 </html>
-
-style {
-  html, body {
-    font-family: system-ui;
-    padding: 0;
-    margin: 0;
-  }
-  code {
-    color: #fc0;
-  }
-  a {
-    color: #09c;
-  }
-}
